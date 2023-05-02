@@ -1,0 +1,38 @@
+1. Some incorrect results:
+
+	['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:990', 'widthdraw(10)', 'setBalance:950', 'widthdraw(50)']
+Final balance: 990
+
+['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:950', 'widthdraw(50)', 'setBalance:1500', 'deposit(500)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 950
+
+['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 950
+
+['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 950
+
+['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+
+2. 100 results with locks added:
+
+['initial balance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'getBalance:1500', 'setBalance:1450', 'widthdraw(50)', 'getBalance:1450', 'setBalance:1440', 'widthdraw(10)']
+Final balance: 1440
+
+['initial balance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'getBalance:1500', 'setBalance:1450', 'widthdraw(50)', 'getBalance:1450', 'setBalance:1440', 'widthdraw(10)']
+Final balance: 1440
+
+['initial balance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'getBalance:1500', 'setBalance:1450', 'widthdraw(50)', 'getBalance:1450', 'setBalance:1440', 'widthdraw(10)']
+Final balance: 1440
+
+['initial balance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'getBalance:1500', 'setBalance:1450', 'widthdraw(50)', 'getBalance:1450', 'setBalance:1440', 'widthdraw(10)']
+Final balance: 1440
+
+['initial balance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'getBalance:1500', 'setBalance:1450', 'widthdraw(50)', 'getBalance:1450', 'setBalance:1440', 'widthdraw(10)']
+Final balance: 1440
+
+['initial balance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'getBalance:1500', 'setBalance:1450', 'widthdraw(50)', 'getBalance:1450', 'setBalance:1440', 'widthdraw(10)']
+Final balance: 1440
+
+3. The output returned the correct amount every time, 1440. The program is non-deterministic, but is no longer concurrent, as it forces one process to wait when the other one takes control of the lock.

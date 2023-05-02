@@ -1,0 +1,122 @@
+PART 2:
+
+A. There are 1680 total orderings for the statements:
+
+getBalance -> deposit 500 -> setBalance -> withdraw 50 -> setBalance -> withdraw 10 -> setBalance
+getBalance -> deposit 500 -> setBalance -> withdraw 10 -> setBalance -> withdraw 50 -> setBalance
+getBalance -> withdraw 50 -> setBalance -> withdraw 10 -> setBalance -> deposit 500 -> setBalance
+getBalance -> withdraw 10 -> setBalance -> withdraw 50 -> setBalance -> deposit 500 -> setBalance
+getBalance -> withdraw 50 -> setBalance -> deposit 500 -> setBalance -> withdraw 10 -> setBalance
+getBalance -> withdraw 50 -> setBalance -> deposit 500 -> setBalance -> withdraw 10 -> setBalance
+. . . . . . 
+
+3 | 3 | 3 = how many orderings?
+
+1,680 possible orderings
+
+  (3+3+3)!
+------------
+3! * 3! * 3!
+
+B. There are 4 different possible final balances.
+
+C. The final balances can be 950, 990, 1440, or 1500.
+
+============================================================
+
+PART 3:
+
+A.
+
+	1. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:990', 'widthdraw(10)', 'setBalance:950', 'widthdraw(50)', 'setBalance:1500', 'deposit(500)']
+Final balance: 1500
+
+	2. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:990', 'widthdraw(10)', 'setBalance:950', 'widthdraw(50)']
+Final balance: 1500
+
+	3. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+
+	4. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:950', 'widthdraw(50)', 'setBalance:1500', 'deposit(500)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+
+	5. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+
+	6. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:990', 'widthdraw(10)', 'setBalance:950', 'widthdraw(50)']
+Final balance: 950
+
+	7. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)', 'setBalance:1500', 'deposit(500)']
+Final balance: 950
+
+	8. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+
+	9. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:990', 'widthdraw(10)', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)']
+Final balance: 990
+
+	10. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 950
+
+	11. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:990', 'widthdraw(10)', 'setBalance:950', 'widthdraw(50)']
+Final balance: 950
+
+	12. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:990', 'widthdraw(10)', 'setBalance:950', 'widthdraw(50)', 'setBalance:1500', 'deposit(500)']
+Final balance: 950
+
+	13. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:950', 'widthdraw(50)', 'setBalance:1500', 'deposit(500)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+
+	14. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:990', 'widthdraw(10)', 'setBalance:950', 'widthdraw(50)', 'setBalance:1500', 'deposit(500)']
+Final balance: 990
+
+	15. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:990', 'widthdraw(10)', 'setBalance:950', 'widthdraw(50)', 'setBalance:1500', 'deposit(500)']
+Final balance: 950
+
+	16. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+
+	17. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+
+	18. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 950
+
+	19. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 950
+
+	20. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+
+	21. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+	
+	22. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+	
+	23. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)', 'setBalance:1500', 'deposit(500)']
+Final balance: 990
+	
+	24. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+	
+	25. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:990', 'widthdraw(10)', 'setBalance:950', 'widthdraw(50)']
+Final balance: 990
+	
+	26. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 990
+	
+	27. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)', 'setBalance:1500', 'deposit(500)']
+Final balance: 1500
+	
+	28. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 950
+	
+	29. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:1500', 'deposit(500)', 'setBalance:950', 'widthdraw(50)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 950
+	
+	30. ['initial balance:1000', 'getBalance:1000', 'getBalance:1000', 'getBalance:1000', 'setBalance:950', 'widthdraw(50)', 'setBalance:1500', 'deposit(500)', 'setBalance:990', 'widthdraw(10)']
+Final balance: 950
+	
+
+B. The output almost matched my analysis from part 2. The program never reached the expected, "correct" value of 1440.
